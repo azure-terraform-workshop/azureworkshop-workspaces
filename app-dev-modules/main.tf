@@ -10,8 +10,12 @@ variable "name" {}
 variable "location" {}
 variable "username" {}
 variable "password" {}
-variable "vnet_address_spacing" {}
-variable "subnet_address_prefixes" {}
+variable "vnet_address_spacing" {
+  type = "list"
+}
+variable "subnet_address_prefixes" {
+  type = "list"
+}
 
 module "networking" {
   source  = "app.terraform.io/cardinalsolutions/networking/azurerm"
