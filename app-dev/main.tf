@@ -15,4 +15,8 @@ variable "location" {
 resource "azurerm_resource_group" "module" {
   name     = "${var.name}-rg"
   location = "${var.location}"
+
+  tags {
+    Owner = "staging"
+  }
 }
