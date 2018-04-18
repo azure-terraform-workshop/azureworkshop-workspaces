@@ -18,6 +18,6 @@ resource "azurerm_resource_group" "module" {
 
   tags {
     owner = "me"
-    environemtn = "dev"
+    environment = "dev"
   }
 }
