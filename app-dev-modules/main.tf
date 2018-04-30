@@ -27,58 +27,58 @@ module "networking" {
   subnet_address_prefixes = "${var.subnet_address_prefixes}"
 }
 
-// module "webserver" {
-//   source  = "app.terraform.io/cardinalsolutions/webserver/azurerm"
-//   version = "0.0.1"
+module "webserver" {
+  source  = "app.terraform.io/cardinalsolutions/webserver/azurerm"
+  version = "0.0.1"
 
-//   name      = "${var.name}"
-//   location  = "${var.location}"
-//   subnet_id = "${module.networking.subnet_ids[0]}"
-//   count     = 2
-//   username  = "${var.username}"
-//   password  = "${var.password}"
-// }
+  name      = "${var.name}"
+  location  = "${var.location}"
+  subnet_id = "${module.networking.subnet_ids[0]}"
+  count     = 2
+  username  = "${var.username}"
+  password  = "${var.password}"
+}
 
-// module "appserver" {
-//   source  = "app.terraform.io/cardinalsolutions/appserver/azurerm"
-//   version = "0.0.1"
+module "appserver" {
+  source  = "app.terraform.io/cardinalsolutions/appserver/azurerm"
+  version = "0.0.1"
 
-//   name      = "${var.name}"
-//   location  = "${var.location}"
-//   subnet_id = "${module.networking.subnet_ids[1]}"
-//   count     = 1
-//   username  = "${var.username}"
-//   password  = "${var.password}"
-// }
+  name      = "${var.name}"
+  location  = "${var.location}"
+  subnet_id = "${module.networking.subnet_ids[1]}"
+  count     = 1
+  username  = "${var.username}"
+  password  = "${var.password}"
+}
 
-// module "dataserver" {
-//   source  = "app.terraform.io/cardinalsolutions/dataserver/azurerm"
-//   version = "0.0.1"
+module "dataserver" {
+  source  = "app.terraform.io/cardinalsolutions/dataserver/azurerm"
+  version = "0.0.1"
 
-//   name      = "${var.name}"
-//   location  = "${var.location}"
-//   subnet_id = "${module.networking.subnet_ids[2]}"
-//   count     = 1
-//   username  = "${var.username}"
-//   password  = "${var.password}"
-// }
+  name      = "${var.name}"
+  location  = "${var.location}"
+  subnet_id = "${module.networking.subnet_ids[2]}"
+  count     = 1
+  username  = "${var.username}"
+  password  = "${var.password}"
+}
 
-// output "networking_vnet" {
-//   value = "${module.networking.vnet_id}"
-// }
+output "networking_vnet" {
+  value = "${module.networking.vnet_id}"
+}
 
-// output "networking_subnets" {
-//   value = "${module.networking.subnet_ids}"
-// }
+output "networking_subnets" {
+  value = "${module.networking.subnet_ids}"
+}
 
-// output "webserver_vms" {
-//   value = "${module.webserver.vms_id}"
-// }
+output "webserver_vms" {
+  value = "${module.webserver.vms_id}"
+}
 
-// output "appserver_vms" {
-//   value = "${module.appserver.vms_id}"
-// }
+output "appserver_vms" {
+  value = "${module.appserver.vms_id}"
+}
 
-// output "dataserver_vms" {
-//   value = "${module.dataserver.vms_id}"
-// }
+output "dataserver_vms" {
+  value = "${module.dataserver.vms_id}"
+}
