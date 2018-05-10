@@ -66,21 +66,33 @@ module "dataserver" {
 }
 
 output "networking_vnet" {
-  value = "${module.networking.vnet_id}"
+  value = "${module.networking.virtualnetwork-ids}"
 }
 
 output "networking_subnets" {
-  value = "${module.networking.subnet_ids}"
+  value = "${module.networking.subnet-ids}"
 }
 
-output "webserver_vms" {
-  value = "${module.webserver.vms_id}"
+output "webserver-vm-ids" {
+  value = "${module.webserver.vm-ids}"
 }
 
-output "appserver_vms" {
-  value = "${module.appserver.vms_id}"
+output "webserver-private-ips" {
+  value = "${module.webserver.private-ips}"
 }
 
-output "dataserver_vms" {
-  value = "${module.dataserver.vms_id}"
+output "appserver-vm-ids" {
+  value = "${module.appserver.vm-ids}"
+}
+
+output "appserver-private-ips" {
+  value = "${module.appserver.private-ips}"
+}
+
+output "dataserver-vm-ids" {
+  value = "${module.dataserver.vm-ids}"
+}
+
+output "dataserver-private-ips" {
+  value = "${module.dataserver.private-ips}"
 }
