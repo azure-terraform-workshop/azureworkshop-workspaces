@@ -3,16 +3,18 @@ terraform {
 }
 
 provider "azurerm" {
-  version = "1.3.0"
+  version = "1.4.0"
 }
 
 variable "name" {}
 variable "location" {}
 variable "username" {}
 variable "password" {}
+
 variable "vnet_address_spacing" {
   type = "list"
 }
+
 variable "subnet_address_prefixes" {
   type = "list"
 }
@@ -20,10 +22,10 @@ variable "subnet_address_prefixes" {
 module "networking" {
   source  = "app.terraform.io/cardinalsolutions/networking/azurerm"
   version = "0.0.1"
-  
-  name                 = "${var.name}"
-  location             = "${var.location}"
-  vnet_address_spacing = "${var.vnet_address_spacing}"
+
+  name                    = "${var.name}"
+  location                = "${var.location}"
+  vnet_address_spacing    = "${var.vnet_address_spacing}"
   subnet_address_prefixes = "${var.subnet_address_prefixes}"
 }
 

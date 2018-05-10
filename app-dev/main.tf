@@ -3,7 +3,7 @@ terraform {
 }
 
 provider "azurerm" {
-  version = "1.3.0"
+  version = "1.4.0"
 }
 
 variable "name" {}
@@ -17,7 +17,7 @@ resource "azurerm_resource_group" "module" {
   location = "${var.location}"
 
   tags {
-    owner = "me"
-    environment = "develop"
+    environment = "dev"
+    owner       = "me"
   }
 }
