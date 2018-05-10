@@ -35,7 +35,7 @@ module "webserver" {
 
   name      = "${var.name}"
   location  = "${var.location}"
-  subnet_id = "${module.networking.subnet_ids[0]}"
+  subnet_id = "${module.networking.subnet-ids[0]}"
   count     = 2
   username  = "${var.username}"
   password  = "${var.password}"
@@ -47,7 +47,7 @@ module "appserver" {
 
   name      = "${var.name}"
   location  = "${var.location}"
-  subnet_id = "${module.networking.subnet_ids[1]}"
+  subnet_id = "${module.networking.subnet-ids[1]}"
   count     = 1
   username  = "${var.username}"
   password  = "${var.password}"
@@ -59,7 +59,7 @@ module "dataserver" {
 
   name      = "${var.name}"
   location  = "${var.location}"
-  subnet_id = "${module.networking.subnet_ids[2]}"
+  subnet_id = "${module.networking.subnet-ids[2]}"
   count     = 1
   username  = "${var.username}"
   password  = "${var.password}"
