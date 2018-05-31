@@ -17,7 +17,7 @@ resource "azurerm_resource_group" "module" {
   location = "${var.location}"
 
   tags {
-    environment = "dev"
+    environment = "development"
     owner       = "me"
   }
 }
