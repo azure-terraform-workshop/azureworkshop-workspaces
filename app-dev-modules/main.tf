@@ -1,11 +1,3 @@
-terraform {
-  required_version = "= 0.11.7"
-}
-
-provider "azurerm" {
-  version = "1.4.0"
-}
-
 variable "name" {}
 variable "location" {}
 variable "username" {}
