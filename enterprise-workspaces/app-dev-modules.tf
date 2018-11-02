@@ -30,7 +30,7 @@ resource "tfe_variable" "app-dev-modules-location" {
 
 resource "tfe_variable" "app-dev-modules-username" {
   key          = "username"
-  value        = "admin"
+  value        = "mypoweradmin"
   category     = "terraform"
   sensitive    = true
   workspace_id = "${tfe_workspace.app-dev-modules.id}"
