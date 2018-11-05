@@ -10,6 +10,6 @@ resource "azurerm_resource_group" "module" {
 
   tags {
     environment = "development"
-    owner       = "Tom"
+    owner2       = "Tom"
   }
 }
