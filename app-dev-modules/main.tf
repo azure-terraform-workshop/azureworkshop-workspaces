@@ -13,7 +13,7 @@ variable "subnet_address_prefixes" {
 }
 
 module "networking" {
-  source  = "cmm-training.digitalinnovation.dev/YOUR_ORG_NAME/networking/azurerm"
+  source  = "app.terraform.io/cardinalsolutions/networking/azurerm"
   version = "0.12.0"
 
   name                    = var.name
@@ -23,7 +23,7 @@ module "networking" {
 }
   
 module "webserver" {
-  source  = "cmm-training.digitalinnovation.dev/YOUR_ORG_NAME/webserver/azurerm"
+  source  = "app.terraform.io/cardinalsolutions/webserver/azurerm"
   version = "0.12.0"
 
   name      = var.name
@@ -36,7 +36,7 @@ module "webserver" {
 }
 
 module "appserver" {
-  source  = "cmm-training.digitalinnovation.dev/YOUR_ORG_NAME/appserver/azurerm"
+  source  = "app.terraform.io/cardinalsolutions/appserver/azurerm"
   version = "0.12.0"
 
   name      = var.name
@@ -49,7 +49,7 @@ module "appserver" {
 }
 
 module "dataserver" {
-  source  = "cmm-training.digitalinnovation.dev/YOUR_ORG_NAME/dataserver/azurerm"
+  source  = "app.terraform.io/cardinalsolutions/dataserver/azurerm"
   version = "0.12.0"
 
   name      = var.name
