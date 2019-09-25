@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "module" {
   name     = "${var.name}-rg"
   location = "${var.location}"
 
-  tags {
+  tags = {
     environment = "dev"
   }
 }
