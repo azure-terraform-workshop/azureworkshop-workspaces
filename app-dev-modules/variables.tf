@@ -1,8 +1,9 @@
 variable "name" {
-    description = "Name of the resource being created"
+    description = "Name of the resource being created."
+    # default = "dev-server-1"
 }
 variable "location" {
-    description = "location of the resource being created"
+    description = ""
 }
 variable "username" {
     description = ""
