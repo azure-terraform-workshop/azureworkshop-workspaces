@@ -1,17 +1,6 @@
-variable "name" {}
-variable "location" {}
-variable "username" {}
-variable "password" {}
-variable "vm_size" {}
-
-variable "vnet_address_spacing" {
-  type = "list"
-}
-
-variable "subnet_address_prefixes" {
-  type = "list"
-}
-
+#====================================================================
+#=================== NETWORKING =====================================
+#====================================================================
 module "networking" {
   source  = "app.terraform.io/cardinalsolutions/networking/azurerm"
   version = "0.12.0"
@@ -21,7 +10,10 @@ module "networking" {
   vnet_address_spacing    = var.vnet_address_spacing
   subnet_address_prefixes = var.subnet_address_prefixes
 }
-  
+
+#====================================================================
+#=================== WEB SERVER =====================================
+#==================================================================== 
 module "webserver" {
   source  = "app.terraform.io/cardinalsolutions/webserver/azurerm"
   version = "0.12.0"
@@ -35,6 +27,9 @@ module "webserver" {
   password  = var.password
 }
 
+#====================================================================
+#=================== APP SERVER =====================================
+#====================================================================
 module "appserver" {
   source  = "app.terraform.io/cardinalsolutions/appserver/azurerm"
   version = "0.12.0"
@@ -48,6 +43,9 @@ module "appserver" {
   password  = var.password
 }
 
+#====================================================================
+#=================== DATA SERVER ====================================
+#====================================================================
 module "dataserver" {
   source  = "app.terraform.io/cardinalsolutions/dataserver/azurerm"
   version = "0.12.0"
