@@ -1,26 +1,26 @@
 variable "name" {
-    description = "Name of the resource being created."
-    # default = "dev-server-1"
+  description = "Name of the resource being created."
+  # default = "dev-server-1"
 }
 variable "location" {
-    description = ""
+  description = ""
 }
 variable "username" {
-    description = ""
+  description = ""
 }
 variable "password" {
-    description = ""
+  description = ""
 }
 variable "vm_size" {
-    description = ""
+  description = ""
 }
 
 variable "vnet_address_spacing" {
-    description = ""
-    type = "list"
+  description = ""
+  type        = "list"
 }
 
 variable "subnet_address_prefixes" {
-    description = ""
-    type = "list"
+  description = ""
+  type        = "list"
 }
