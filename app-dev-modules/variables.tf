@@ -1,9 +1,9 @@
 variable "name" {
-  description = "Name of the resource being created."
+  description = "The name of the resource being created."
   # default = "dev-server-1"
 }
 variable "location" {
-  description = ""
+  description = "The location of the network thats being created."
 }
 variable "username" {
   description = ""
@@ -12,7 +12,7 @@ variable "password" {
   description = ""
 }
 variable "vm_size" {
-  description = ""
+  description = "Specifies the size of the Virtual Machine."
 }
 
 variable "vnet_address_spacing" {
